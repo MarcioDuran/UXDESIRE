@@ -108,23 +108,27 @@
     </div>
     <div class="grid_10 prefix_1">
       <h3>Get In Touch</h3>
-      <form name="contact" method="POST" data-netlify="true" 
-    data-netlify-honeypot="bot-field" action="/success/"
-        onSubmit="submit">
-        
-        <input class="d-none" name="bot-field" />
-                <div class="form-row">
-            <div class="form-group col-md-6 mt-3">
-                <label for="name">Your Name</label>
-                <input type="text" class="form-control" id="name" name="name">
-              </div>
-          <div class="form-group col-md-6 mt-3">
-            <label for="inputEmail">Email</label>
-            <input type="email" class="form-control" id="inputEmail" name="email">
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary mt-3">Send</button>
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Your Role: <select name="role[]" multiple>
+            <option value="leader">Leader</option>
+            <option value="follower">Follower</option>
+          </select></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </form>
+      
       
     </div>
    </div>
