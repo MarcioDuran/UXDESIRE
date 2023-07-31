@@ -125,18 +125,22 @@
           <label>Message: <textarea name="message"></textarea></label>
         </p>
         <p>
-         <button type="submit" class="btn" onclick="showSuccessMessage()">Submit</button>
-
+          <button type="submit" class="btn">Submit</button>
         </p>
       </form>
       
+      <div class="success" style="display: none;">
+        Contact form submitted! <strong>We will be in touch soon.</strong>
+      </div>
       
       <script>
-        function showSuccessMessage() {
+        document.querySelector("form[name='contact']").addEventListener("submit", function (event) {
           var successMessage = document.querySelector(".success");
           successMessage.style.display = "block";
-        }
+          event.preventDefault(); // Prevent the default form submission
+        });
       </script>
+      
       
               
 
