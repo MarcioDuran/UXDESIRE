@@ -14,7 +14,15 @@ http://www.templatemo.com/tm-515-eatery
     overflow-x: hidden;
   }
 
-
+/*---------------------------------------
+     PARAGRAFO DINAMICO      
+  -----------------------------------------*/
+  .dynamic-paragraph {
+    color: #ce3232; /* Altere a cor conforme necessário */
+    font-size: 18px; /* Altere o tamanho da fonte conforme necessário */
+    /* Adicione outros estilos conforme necessário */
+  }
+  
 
   /*---------------------------------------
      TYPOGRAPHY              
