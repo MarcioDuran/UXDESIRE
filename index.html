@@ -74,21 +74,27 @@ Desenvolvimento OnePage UxDesire
                          <li><a href="#">WhatsApp <i class="fa fa-phone"></i>+055 11 94278-6597</a></li>
                          <a href="#footer" class="section-btn">idioma</a>
                           <!--BOTÃO TRADUZI-->
-                         <div class="text">
-                              <p>Escolha seu idioma.</p>
-                         </div>
-                         
-                         <div class="language">
-                              <select name="language">
-                              <option value="english">Inglês</option>
-                              <option value="portuguese">Português</option>
-                              <option value="spanish">Espanhol</option>
-                              </select>
-                         </div>
-                         
                          <div class="tradutor">
-                              <button>Traduzir</button>
-                         </div>  
+                              <button id="translateButton">Traduzir</button>
+                          </div>
+                          
+                          <script>
+                          // ...
+                          const translateButton = document.querySelector("#translateButton");
+                          
+                          // Evento de clique para o botão de tradução
+                          translateButton.addEventListener("click", function() {
+                              // Obtém o idioma selecionado
+                              const selectedLanguage = language.value;
+                          
+                              // Realiza a tradução do texto
+                              translateText(selectedLanguage);
+                          });
+                          // ...
+                          </script>
+                          
+                          
+                          
                           <!-- TRADUZIR -->  
                     </ul>
                </div>
