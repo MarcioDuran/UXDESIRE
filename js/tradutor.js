@@ -1,19 +1,35 @@
-// Adiciona um botão para traduzir o texto
-const translateButton = document.createElement("button");
-translateButton.textContent = "Traduzir";
-translateButton.addEventListener("click", function() {
+// Importa a API do Google Translate
+<script src="https://translate.googleapis.com/translate_a/element.js?hl=pt-BR&sl=pt-BR&tl=en"></script>
+
+/// Seletor de idiomas
+const text = document.querySelector(".text");
+const language = document.querySelector(".language");
+const translateButton = document.querySelector(".tradutor");
+
+// Função para traduzir o texto
+function translateText(language) {
   // Obtém o texto a ser traduzido
-  const text = document.querySelector(".text").textContent;
+  const textToTranslate = text.textContent;
 
-  // Obtém o idioma atual
-  const language = document.querySelector(".language").value;
-
-  // Obtém a tradução do texto
-  const translatedText = dictionary[language][text];
+  // Realiza a tradução do texto
+  const translatedText = googleTranslate.translate(textToTranslate, {
+    from: "pt-BR",
+    to: language,
+  });
 
   // Atualiza o texto com a tradução
-  document.querySelector(".text").textContent = translatedText;
+  text.textContent = translatedText;
+}
+
+// Eventos
+translateButton.addEventListener("click", function() {
+  // Obtém o idioma selecionado
+  const selectedLanguage = language.value;
+
+  // Realiza a tradução do texto
+  translateText(selectedLanguage);
 });
 
-// Adiciona o botão ao documento
-document.querySelector(".tradutor").appendChild(translateButton);
+// Inicializa o idioma
+language.value = "en";
+translateText(language.value);
