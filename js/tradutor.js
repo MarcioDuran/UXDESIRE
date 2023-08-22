@@ -16,4 +16,4 @@ translateButton.addEventListener("click", function() {
 });
 
 // Adiciona o botão ao documento
-document.querySelector(".container").appendChild(translateButton);
+document.querySelector(".tradutor").appendChild(translateButton);
