@@ -73,6 +73,18 @@ Desenvolvimento OnePage UxDesire
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#">WhatsApp <i class="fa fa-phone"></i>+055 11 94278-6597</a></li>
                          <a href="#footer" class="section-btn">idioma</a>
+                         <!--CODIGO PRA SELECIONAR O IDIOMA-->
+                         <div class="tradutor">
+                            <select name="language" onchange="translateText(this.value)">
+                            <option value="pt-br">Português (Brasil)</option>
+                            <option value="en">Inglês</option>
+                            <option value="es">Espanhol</option>
+                            <option value="fr">Francês</option>
+                            <option value="de">Alemão</option>
+                         </select>
+                        </div>
+
+                         <!--FIM DO CODIGO SELEÇÃO IDIOMA-->
                           <!--BOTÃO TRADUZI-->
                          <div class="tradutor">
                               <button id="translateButton">Traduzir</button>
