@@ -86,71 +86,9 @@ Desenvolvimento OnePage UxDesire
 
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#">WhatsApp <i class="fa fa-phone"></i>+055 11 94278-6597</a></li>
-                         <a href="#footer" class="section-btn">Open Hours !</a>
-                         <!--CODIGO PRA SELECIONAR O IDIOMA-->
-                         <!-- Importa a API do Google Translate -->
-<script src="https://translate.googleapis.com/translate_a/element.js?hl=pt-BR&sl=pt-BR&tl=en"></script>
-
-<!-- Seletor de idiomas -->
-<select class="language">
-  <option value="pt-br">Português (Brasil)</option>
-  <option value="en">Inglês</option>
-  <option value="es">Espanhol</option>
-  <option value="fr">Francês</option>
-  <option value="de">Alemão</option>
-</select>
-
-<!-- Texto a ser traduzido -->
-<div class="text">
-  Seu texto a ser traduzido aqui.
-</div>
-
-<!-- Botão de tradução -->
-<button class="tradutor">Traduzir</button>
-
-<script>
-// Seletor de elementos
-const text = document.querySelector(".text");
-const language = document.querySelector(".language");
-const translateButton = document.querySelector(".tradutor");
-
-// Função para traduzir o texto
-function translateText(language) {
-  // Obtém o texto a ser traduzido
-  const textToTranslate = text.textContent;
-
-  // Realiza a tradução do texto
-  const translatedText = googleTranslate.translate(textToTranslate, {
-    from: "pt-BR",
-    to: language,
-  });
-
-  // Atualiza o texto com a tradução
-  text.textContent = translatedText;
-}
-
-// Inicializa a API do Google Translate
-const googleTranslate = new google.translate.TranslateElement({}, 'google-translate-element');
-googleTranslate.showBanner(false);
-
-// Evento de clique para o botão de tradução
-translateButton.addEventListener("click", function() {
-  // Obtém o idioma selecionado
-  const selectedLanguage = language.value;
-
-  // Realiza a tradução do texto
-  translateText(selectedLanguage);
-});
-
-// Inicializa o idioma
-language.value = "en";
-translateText(language.value);
-</script>
-
-                          
-                          
-                          
-                          <!-- TRADUZIR -->  
+                         <a href="#footer" class="section-btn">Open Hours !</a>                       
+                       
+                                     
                     </ul>
                </div>
 
