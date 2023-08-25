@@ -53,7 +53,12 @@ p {
   line-height: 24px;
 }
 
-
+/*---------------------------------------
+   BARRA WIDGET GOOGLE !          
+-----------------------------------------*/
+#google_translate_element {
+  display: none;
+}
 
 /*---------------------------------------
    GENERAL               
