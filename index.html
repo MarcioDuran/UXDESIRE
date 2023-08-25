@@ -1,41 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <style type="text/css">
-          #google_translate_element {
-              display: none;
-          }
 
-          /*
-          .goog-te-banner-frame {
-              display: none !important;
-          }
-          body {
-              position: static !important;
-              top: 0 !important;
-          }
-          */
-          </style>
-      <!-- Seletor de idiomas -->
-      <div id="google_translate_element"></div>
-
-          <!-- Div onde o widget de tradução será renderizado -->
- <div id="google_translate_element" class="boxTradutor"></div>
-<!-- Seletor de idiomas personalizados  -->
- <a href="javascript:trocarIdioma('es')"><img alt="espanhol" src="images/es.png"></a>
- <a href="javascript:trocarIdioma('en')"><img alt="ingles" src="images/en.png"></a>
- <!-- O Javascript deve vir depois -->
-
- 
- 
+     <title>NFT Marcio Duran @UxDesire Partner OpenSean</title>
      
-<title>NFT Marcio Duran @UxDesire Partner OpenSean</title> 
-
+     
+      
 <!-- 
 
+Eatery Cafe Template 
 
-Desenvolvimento OnePage UxDesire 
-
+http://www.templatemo.com/tm-515-eatery
 
 -->
      <meta charset="UTF-8">
@@ -51,12 +26,10 @@ Desenvolvimento OnePage UxDesire
      <link rel="stylesheet" href="css/owl.carousel.css">
      <link rel="stylesheet" href="css/owl.theme.default.min.css">
      <link rel="stylesheet" href="css/magnific-popup.css">
-     <style type="text/css">
-      #google_translate_element {
-     display: none;
- }     
+     <link rel="stylesheet" href="css/tradutor.css">
 
-     <-- Main CSS -->
+
+     <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/templatemo-style.css">
 
 </head>
@@ -101,9 +74,24 @@ Desenvolvimento OnePage UxDesire
 
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#">WhatsApp <i class="fa fa-phone"></i>+055 11 94278-6597</a></li>
-                         <a href="#footer" class="section-btn">Open Hours !</a>                       
-                       
-                                     
+                         <a href="#footer" class="section-btn">idioma</a>
+                          <!--BOTÃO TRADUZI-->
+                         <div class="text">
+                              <p>Escolha seu idioma.</p>
+                         </div>
+                         
+                         <div class="language">
+                              <select name="language">
+                              <option value="english">Inglês</option>
+                              <option value="portuguese">Português</option>
+                              <option value="spanish">Espanhol</option>
+                              </select>
+                         </div>
+                         
+                         <div class="tradutor">
+                              <button>Traduzir</button>
+                         </div>  
+                          <!-- TRADUZIR -->  
                     </ul>
                </div>
 
@@ -132,7 +120,7 @@ Desenvolvimento OnePage UxDesire
                                    <div class="container">
                                         <div class="col-md-8 col-sm-12">
                                              <h3>We sell at OpenSean and we have a partner private showcase</h3>
-                                             <h1>Discover the NFT that inspires art and imagination, original and valuable</h1>
+                                             <h1>Discover the NTF that inspires art and imagination, original and valuable</h1>
                                              <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover menu</a>
                                         </div>
                                    </div>
@@ -143,7 +131,7 @@ Desenvolvimento OnePage UxDesire
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-8 col-sm-12">
-                                             <h3>In our showcase we are releasing new artwork NFTs - Brazil - São Paulo</h3>
+                                             <h3>In our showcase we are releasing new artwork NTFs - Brazil - São Paulo</h3>
                                              <h1>Showcase and personalized services for special customers</h1>
                                              <a href="#contact" class="section-btn btn btn-default smoothScroll">Reservation</a>
                                         </div>
@@ -576,37 +564,7 @@ Desenvolvimento OnePage UxDesire
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
      <script src="js/tradutor.js"></script>
-     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-     <script>
-         var comboGoogleTradutor = null;
-
-         function googleTranslateElementInit() {
-             new google.translate.TranslateElement({
-                 pageLanguage: 'pt',
-                 includedLanguages: 'en,es',
-                 layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-             }, 'google_translate_element');
-
-             comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
-         }
-
-         function changeEvent(el) {
-             if (el.fireEvent) {
-                 el.fireEvent('onchange');
-             } else {
-                 var evObj = document.createEvent("HTMLEvents");
-                 evObj.initEvent("change", false, true);
-                 el.dispatchEvent(evObj);
-             }
-         }
-
-         function trocarIdioma(sigla) {
-             if (comboGoogleTradutor) {
-                 comboGoogleTradutor.value = sigla;
-                 changeEvent(comboGoogleTradutor);
-             }
-         }
-     </script>
+     
 
 </body>
 </html>
