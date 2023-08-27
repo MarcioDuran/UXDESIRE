@@ -34,9 +34,7 @@ http://www.templatemo.com/tm-515-eatery
 
 </head>
 <body>
-<!-- Div onde o widget de tradução será renderizado -->
-    
-
+<!-- Div onde o widget de tradução será renderizado -->    
 <div id="google_translate_element"></div>
 <!--troca idiomas
 <div id="google_translate_element" class="boxTradutor"></div>     
@@ -556,17 +554,12 @@ http://www.templatemo.com/tm-515-eatery
      <script src="js/jquery.magnific-popup.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
-     
+     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
      <script type="text/javascript">
-       (function() {
-         var t = document.createElement("script");
-         t.src = "https://translate.googleapis.com/translate_a/element.js?hl=pt-BR&sl=en&tl=pt";
-         t.async = true;
-         t.defer = true;
-         var s = document.getElementsByTagName("script")[0];
-         s.parentNode.insertBefore(t, s);
-       })();
-     </script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          }
+          </script>
      
     
 </body>
